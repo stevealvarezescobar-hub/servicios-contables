@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>T.E. Servicios Contables & Tributarios</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#07142b;
+      color:white;
+    }
+
+    header{
+      min-height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+      url("banner.jpg") center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px;
+    }
+
+    .hero{
+      max-width:1200px;
+      width:100%;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .logo-box{
+      display:flex;
+      justify-content:center;
+    }
+
+    .logo-box img{
+      width:320px;
+      max-width:100%;
+      border-radius:50%;
+      box-shadow:0 0 25px rgba(255,255,255,.3);
+      background:white;
+      padding:10px;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      line-height:1.1;
+      margin-bottom:20px;
+    }
+
+    .hero-text h1 span{
+      color:#78d832;
+    }
+
+    .hero-text p{
+      font-size:20px;
+      line-height:1.7;
+      color:#d8d8d8;
+      margin-bottom:30px;
+    }
+
+    .services{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+      margin-bottom:35px;
+    }
+
+    .service{
+      background:#0f2d59;
+      padding:14px 22px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,.15);
+      font-weight:bold;
+    }
+
+    .buttons{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      text-decoration:none;
+      padding:15px 28px;
+      border-radius:10px;
+      font-weight:bold;
+      transition:.3s;
+    }
+
+    .btn-primary{
+      background:#67d628;
+      color:#001d00;
+    }
+
+    .btn-primary:hover{
+      background:#84ff3c;
+      transform:translateY(-3px);
+    }
+
+    .btn-secondary{
+      background:transparent;
+      border:2px solid white;
+      color:white;
+    }
+
+    .btn-secondary:hover{
+      background:white;
+      color:#07142b;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 0 20px rgba(0,0,0,.4);
+    }
+
+    .about-text h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .about-text p{
+      font-size:18px;
+      line-height:1.8;
+      color:#d4d4d4;
+    }
+
+    .contact{
+      background:#0c1d3a;
+      text-align:center;
+    }
+
+    .contact h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .contact-info{
+      margin-top:30px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:25px;
+    }
+
+    .contact-card{
+      background:#102a52;
+      padding:25px;
+      border-radius:15px;
+      min-width:260px;
+    }
+
+    .contact-card h3{
+      color:#78d832;
+      margin-bottom:10px;
+    }
+
+    footer{
+      text-align:center;
+      padding:25px;
+      background:#050d1c;
+      color:#a7a7a7;
+    }
+
+    @media(max-width:900px){
+
+      .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      .services{
+        justify-content:center;
+      }
+
+      .buttons{
+        justify-content:center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hero">
+
+      <div class="logo-box">
+        <img src="logo.png" alt="Logo T.E.">
+      </div>
+
+      <div class="hero-text">
+        <h1>
+          Optimiza tus impuestos y 
+          <span>haz crecer tu negocio</span>
+        </h1>
+
+        <p>
+          Servicios profesionales de contabilidad y asesoría tributaria
+          para emprendedores, negocios y empresas.
+        </p>
+
+        <div class="services">
+          <div class="service">Declaraciones</div>
+          <div class="service">Contabilidad</div>
+          <div class="service">Asesoría Tributaria</div>
+        </div>
+
+        <div class="buttons">
+          <a href="https://wa.me/593992988615" class="btn btn-primary">
+            Contactar por WhatsApp
+          </a>
+
+          <a href="#contacto" class="btn btn-secondary">
+            Más información
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <section class="about">
+
+    <img src="banner.jpg" alt="Servicios Contables">
+
+    <div class="about-text">
+      <h2>¿Por qué elegirnos?</h2>
+
+      <p>
+        En T.E. Servicios Contables & Tributarios brindamos soluciones
+        eficientes para mantener tus obligaciones fiscales al día y ayudarte
+        a tomar mejores decisiones financieras.
+      </p>
+
+      <br>
+
+      <p>
+        Nuestro objetivo es darte tranquilidad, organización y asesoría
+        profesional para que puedas enfocarte en hacer crecer tu negocio.
+      </p>
+    </div>
+
+  </section>
+
+  <section class="contact" id="contacto">
+
+    <h2>Contáctanos</h2>
+
+    <div class="contact-info">
+
+      <div class="contact-card">
+        <h3>Correo</h3>
+        <p>escobartania1101@gmail.com</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>WhatsApp</h3>
+        <p>099 298 8615</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Servicios</h3>
+        <p>Contabilidad, impuestos y asesoría tributaria</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 T.E. Servicios Contables & Tributarios - Todos los derechos reservados
+  </footer>
+
+</body>
+</html>
