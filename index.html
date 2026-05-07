@@ -1,350 +1,481 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>T.E. Servicios Contables & Tributarios</title>
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>T.E. Servicios Contables & Tributarios</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+        <style>
+          *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+          }
 
-    body{
-      background:#07142b;
-      color:white;
-    }
+          body{
+            background:#07142b;
+            color:white;
+          }
 
-    header{
-      min-height:100vh;
-      background:
-      linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-      url("banner.jpg") center/cover no-repeat;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:40px;
-    }
+          header{
+            min-height:100vh;
+            background:
+            linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+            url("banner.jpg") center/cover no-repeat;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:40px;
+          }
 
-    .hero{
-      max-width:1200px;
-      width:100%;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:40px;
-      align-items:center;
-    }
+          .hero{
+            max-width:1200px;
+            width:100%;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:40px;
+            align-items:center;
+          }
 
-    .logo-box{
-      display:flex;
-      justify-content:center;
-    }
+          .logo-box{
+            display:flex;
+            justify-content:center;
+          }
 
-    .logo-box img{
-      width:320px;
-      max-width:100%;
-      border-radius:50%;
-      box-shadow:0 0 25px rgba(255,255,255,.3);
-      background:white;
-      padding:10px;
-    }
+          .logo-box img{
+            width:320px;
+            max-width:100%;
+            border-radius:50%;
+            box-shadow:0 0 25px rgba(255,255,255,.3);
+            background:white;
+            padding:10px;
+          }
 
-    .hero-text h1{
-      font-size:58px;
-      line-height:1.1;
-      margin-bottom:20px;
-    }
+          .hero-text h1{
+            font-size:58px;
+            line-height:1.1;
+            margin-bottom:20px;
+          }
 
-    .hero-text h1 span{
-      color:#78d832;
-    }
+          .hero-text h1 span{
+            color:#78d832;
+          }
 
-    .hero-text p{
-      font-size:20px;
-      line-height:1.7;
-      color:#d8d8d8;
-      margin-bottom:30px;
-    }
+          .hero-text p{
+            font-size:20px;
+            line-height:1.7;
+            color:#d8d8d8;
+            margin-bottom:30px;
+          }
 
-    .services{
-      display:flex;
-      flex-wrap:wrap;
-      gap:15px;
-      margin-bottom:35px;
-    }
+          .services{
+            display:flex;
+            flex-wrap:wrap;
+            gap:15px;
+            margin-bottom:35px;
+          }
 
-    .service{
-      background:#0f2d59;
-      padding:14px 22px;
-      border-radius:10px;
-      border:1px solid rgba(255,255,255,.15);
-      font-weight:bold;
-      text-decoration:none;
-      color:white;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-    }
+          .service{
+            background:#0f2d59;
+            padding:14px 22px;
+            border-radius:10px;
+            border:1px solid rgba(255,255,255,.15);
+            font-weight:bold;
+            text-decoration:none;
+            color:white;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+          }
 
-    .buttons{
-      display:flex;
-      gap:15px;
-      flex-wrap:wrap;
-    }
+          .buttons{
+            display:flex;
+            gap:15px;
+            flex-wrap:wrap;
+          }
 
-    .btn{
-      text-decoration:none;
-      padding:15px 28px;
-      border-radius:10px;
-      font-weight:bold;
-      transition:.3s;
-    }
+          .btn{
+            text-decoration:none;
+            padding:15px 28px;
+            border-radius:10px;
+            font-weight:bold;
+            transition:.3s;
+          }
 
-    .btn-primary{
-      background:#67d628;
-      color:#001d00;
-    }
+          .btn-primary{
+            background:#67d628;
+            color:#001d00;
+          }
 
-    .btn-primary:hover{
-      background:#84ff3c;
-      transform:translateY(-3px);
-    }
+          .btn-primary:hover{
+            background:#84ff3c;
+            transform:translateY(-3px);
+          }
 
-    .btn-secondary{
-      background:transparent;
-      border:2px solid white;
-      color:white;
-    }
+          .btn-secondary{
+            background:transparent;
+            border:2px solid white;
+            color:white;
+          }
 
-    .btn-secondary:hover{
-      background:white;
-      color:#07142b;
-    }
+          .btn-secondary:hover{
+            background:white;
+            color:#07142b;
+          }
 
-    section{
-      padding:80px 10%;
-    }
+          section{
+            padding:80px 10%;
+          }
 
-    .about{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:50px;
-      align-items:center;
-    }
+          .about{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:50px;
+            align-items:center;
+          }
 
-    .about img{
-      width:100%;
-      border-radius:20px;
-      box-shadow:0 0 20px rgba(0,0,0,.4);
-    }
+          .about img{
+            width:100%;
+            border-radius:20px;
+            box-shadow:0 0 20px rgba(0,0,0,.4);
+          }
 
-    .about-text h2{
-      font-size:42px;
-      margin-bottom:20px;
-    }
+          .about-text h2{
+            font-size:42px;
+            margin-bottom:20px;
+          }
 
-    .about-text p{
-      font-size:18px;
-      line-height:1.8;
-      color:#d4d4d4;
-    }
+          .about-text p{
+            font-size:18px;
+            line-height:1.8;
+            color:#d4d4d4;
+          }
 
-    .contact{
-      background:#0c1d3a;
-      text-align:center;
-    }
+          .contact{
+            background:#0c1d3a;
+            text-align:center;
+          }
 
-    .contact h2{
-      font-size:42px;
-      margin-bottom:20px;
-    }
+          .contact h2{
+            font-size:42px;
+            margin-bottom:20px;
+          }
 
-    .contact-info{
-      margin-top:30px;
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:25px;
-    }
+          .contact-info{
+            margin-top:30px;
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:25px;
+          }
 
-    .contact-card{
-      background:#102a52;
-      padding:25px;
-      border-radius:15px;
-      min-width:260px;
-    }
+          .contact-card{
+            background:#102a52;
+            padding:25px;
+            border-radius:15px;
+            min-width:260px;
+          }
 
-    .contact-card h3{
-      color:#78d832;
-      margin-bottom:10px;
-    }
+          .contact-card h3{
+            color:#78d832;
+            margin-bottom:10px;
+          }
 
-    footer{
-      text-align:center;
-      padding:25px;
-      background:#050d1c;
-      color:#a7a7a7;
-    }
+          footer{
+            text-align:center;
+            padding:25px;
+            background:#050d1c;
+            color:#a7a7a7;
+          }
 
-    @media(max-width:900px){
+          @media(max-width:900px){
 
-      .hero{
-        grid-template-columns:1fr;
+            .hero{
+              grid-template-columns:1fr;
+              text-align:center;
+            }
+
+            .hero-text h1{
+              font-size:42px;
+            }
+
+            .about{
+              grid-template-columns:1fr;
+            }
+
+            .services{
+              justify-content:center;
+            }
+
+            .buttons{
+              justify-content:center;
+            }
+            .services-section{
+        margin-top:40px;
+      }
+
+      .services-title{
         text-align:center;
+        font-size:40px;
+        margin-bottom:40px;
+        color:white;
       }
 
-      .hero-text h1{
-        font-size:42px;
-      }
-
-      .about{
-        grid-template-columns:1fr;
-      }
-
-      .services{
+      .services-grid{
+        display:flex;
         justify-content:center;
+        gap:30px;
+        flex-wrap:wrap;
       }
 
-      .buttons{
-        justify-content:center;
+      .service-card{
+        background:#102a52;
+        width:320px;
+        padding:30px;
+        border-radius:20px;
+        text-align:center;
+        box-shadow:0 0 20px rgba(0,0,0,.35);
+        transition:.3s;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <header>
-    <div class="hero">
+      .service-card:hover{
+        transform:translateY(-8px);
+      }
 
-      <div class="logo-box">
-        <img src="logo.png" alt="Logo T.E.">
-      </div>
+      .service-card h3{
+        color:#78d832;
+        font-size:28px;
+        margin-bottom:15px;
+      }
 
-      <div class="hero-text">
-        <h1>
-          Optimiza tus impuestos y 
-          <span>haz crecer tu negocio</span>
-        </h1>
+      .service-card p{
+        color:#d8d8d8;
+        margin-bottom:20px;
+        line-height:1.6;
+      }
 
-        <p>
-          Servicios profesionales de contabilidad y asesoría tributaria
-          para emprendedores, negocios y empresas.
-        </p>
-<div class="services">
+      .service-card button{
+        background:#78d832;
+        color:#001d00;
+        border:none;
+        padding:12px 24px;
+        border-radius:10px;
+        font-weight:bold;
+        cursor:pointer;
+        transition:.3s;
+      }
 
-  <a 
-    class="service"
-    href="https://wa.me/593992988615?text=Hola,%20necesito%20ayuda%20con%20declaraciones%20de%20impuestos"
-    target="_blank"
-  >
-    Declaraciones de impuestos y anexos al SRI
-  </a>
+      .service-card button:hover{
+        transform:scale(1.05);
+      }
 
-  <a 
-    class="service"
-    href="https://wa.me/593992988615?text=Hola,%20necesito%20ayuda%20con%20afiliaciones%20y%20aportes%20al%20IESS"
-    target="_blank"
-  >
-    Gestión de afiliaciones y aportes al IESS
-  </a>
+      .extra-info{
+        display:none;
+        margin-top:20px;
+        line-height:1.8;
+        color:white;
+      }
 
-  <a 
-    class="service"
-    href="https://wa.me/593992988615?text=Hola,%20necesito%20ayuda%20con%20nóminas%20y%20cumplimiento%20laboral"
-    target="_blank"
-  >
-    Elaboración de nóminas y cumplimiento laboral
-    ante el Ministerio del Trabajo
-  </a>
+      .whatsapp-btn{
+        display:inline-block;
+        margin-top:15px;
+        background:#25d366;
+        color:white;
+        padding:12px 20px;
+        border-radius:10px;
+        text-decoration:none;
+        font-weight:bold;
+      }
 
-  <a 
-    class="service"
-    href="https://wa.me/593992988615?text=Hola,%20necesito%20ayuda%20con%20contabilidad"
-    target="_blank"
-  >
-    Contabilidad
-  </a>
+      .whatsapp-btn:hover{
+        opacity:.9;
+      }
+          }
+        </style>
+      </head>
+      <body>
 
-  <a 
-    class="service"
-    href="https://wa.me/593992988615?text=Hola,%20necesito%20asesoría%20tributaria"
-    target="_blank"
-  >
-    Asesoría Tributaria
-  </a>
+        <header>
+          <div class="hero">
 
-</div>
+            <div class="logo-box">
+              <img src="logo.png" alt="Logo T.E.">
+            </div>
 
-        <div class="buttons">
-          <a href="https://wa.me/593992988615" class="btn btn-primary">
-            Contactar por WhatsApp
-          </a>
+            <div class="hero-text">
+              <h1>
+                Optimiza tus impuestos y 
+                <span>haz crecer tu negocio</span>
+              </h1>
 
-          <a href="#contacto" class="btn btn-secondary">
-            Más información
-          </a>
+              <p>
+                Servicios profesionales de contabilidad y asesoría tributaria
+                para emprendedores, negocios y empresas.
+              </p>
+            <div class="services">
+
+            <section class="services-section">
+
+        <h2 class="services-title">
+          Nuestros Servicios
+        </h2>
+
+        <div class="services-grid">
+
+          <div class="service-card">
+
+            <h3>Declaraciones SRI</h3>
+
+            <p>
+              Impuestos y anexos tributarios.
+            </p>
+
+            <button onclick="toggleInfo('info1')">
+              Ver más
+            </button>
+
+            <div class="extra-info" id="info1">
+
+              Realizamos:
+              <br><br>
+
+              • Declaraciones mensuales<br>
+              • IVA y RENTA<br>
+              • Anexos tributarios<br>
+              • Asesoría ante el SRI
+              <br><br>
+
+              <a
+              href="https://wa.me/593992988615?text=Hola,%20necesito%20ayuda%20con%20declaraciones%20de%20impuestos"
+              target="_blank"
+              class="whatsapp-btn"
+              >
+              Solicitar ayuda
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="service-card">
+
+            <h3>IESS</h3>
+
+            <p>
+              Afiliaciones y aportes.
+            </p>
+
+            <button onclick="toggleInfo('info2')">
+              Ver más
+            </button>
+
+            <div class="extra-info" id="info2">
+
+              Gestionamos:
+              <br><br>
+
+              • Afiliaciones<br>
+              • Avisos de entrada y salida<br>
+              • Generación de planillas<br>
+              • Aportes al IESS
+              <br><br>
+
+              <a
+              href="https://wa.me/593992988615?text=Hola,%20necesito%20ayuda%20con%20afiliaciones%20y%20aportes%20al%20IESS"
+              target="_blank"
+              class="whatsapp-btn"
+              >
+              Solicitar ayuda
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="service-card">
+
+            <h3>Nóminas</h3>
+
+            <p>
+              Cumplimiento laboral.
+            </p>
+
+            <button onclick="toggleInfo('info3')">
+              Ver más
+            </button>
+
+            <div class="extra-info" id="info3">
+
+              Elaboramos:
+              <br><br>
+
+              • Roles de pago<br>
+              • Décimos<br>
+              • Vacaciones<br>
+              • Trámites laborales
+              <br><br>
+
+              <a
+              href="https://wa.me/593992988615?text=Hola,%20necesito%20ayuda%20con%20nóminas%20y%20cumplimiento%20laboral"
+              target="_blank"
+              class="whatsapp-btn"
+              >
+              Solicitar ayuda
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
 
-      </div>
+      </section>
 
-    </div>
-  </header>
+        </section>
 
-  <section class="about">
+        <section class="contact" id="contacto">
 
-    <img src="banner.jpg" alt="Servicios Contables">
+          <h2>Contáctanos</h2>
 
-    <div class="about-text">
-      <h2>¿Por qué elegirnos?</h2>
+          <div class="contact-info">
 
-      <p>
-        En T.E. Servicios Contables & Tributarios brindamos soluciones
-        eficientes para mantener tus obligaciones fiscales al día y ayudarte
-        a tomar mejores decisiones financieras.
-      </p>
+            <div class="contact-card">
+              <h3>Correo</h3>
+              <p>escobartania1101@gmail.com</p>
+            </div>
 
-      <br>
+            <div class="contact-card">
+              <h3>WhatsApp</h3>
+              <p>099 298 8615</p>
+            </div>
 
-      <p>
-        Nuestro objetivo es darte tranquilidad, organización y asesoría
-        profesional para que puedas enfocarte en hacer crecer tu negocio.
-      </p>
-    </div>
+            <div class="contact-card">
+              <h3>Servicios</h3>
+              <p>Contabilidad, impuestos y asesoría tributaria</p>
+            </div>
 
-  </section>
+          </div>
 
-  <section class="contact" id="contacto">
+        </section>
 
-    <h2>Contáctanos</h2>
+        <footer>
+          © 2026 T.E. Servicios Contables & Tributarios - Todos los derechos reservados
+        </footer>
+      <script>
 
-    <div class="contact-info">
+      function toggleInfo(id){
 
-      <div class="contact-card">
-        <h3>Correo</h3>
-        <p>escobartania1101@gmail.com</p>
-      </div>
+        const info = document.getElementById(id);
 
-      <div class="contact-card">
-        <h3>WhatsApp</h3>
-        <p>099 298 8615</p>
-      </div>
+        if(info.style.display === "block"){
+          info.style.display = "none";
+        }else{
+          info.style.display = "block";
+        }
+        }                 
 
-      <div class="contact-card">
-        <h3>Servicios</h3>
-        <p>Contabilidad, impuestos y asesoría tributaria</p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <footer>
-    © 2026 T.E. Servicios Contables & Tributarios - Todos los derechos reservados
-  </footer>
-
-</body>
+    </script>
+  </body>
 </html>
